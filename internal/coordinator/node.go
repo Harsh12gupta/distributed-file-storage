@@ -18,11 +18,12 @@ type Node struct {
 	AvailableSpace uint64
 }
 
-func NewNode(id string, address string) *Node {
+func NewNode(id string, address string, totalSpace uint64, availableSpace uint64) *Node {
 	return &Node{
-		ID:            id,
-		Address:       address,
-		Status:        NodeUp,
-		LastHeartbeat: time.Now(),
+		ID:             id,
+		Address:        address,
+		Status:         NodeUp,
+		TotalSpace:     totalSpace,
+		AvailableSpace: availableSpace,
 	}
 }
