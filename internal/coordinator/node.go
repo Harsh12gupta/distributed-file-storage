@@ -10,10 +10,12 @@ const (
 )
 
 type Node struct {
-	ID            string
-	Address       string
-	Status        NodeStatus
-	LastHeartbeat time.Time
+	ID             string
+	Address        string
+	Status         NodeStatus
+	LastHeartbeat  time.Time
+	TotalSpace     uint64
+	AvailableSpace uint64
 }
 
 func NewNode(id string, address string) *Node {
